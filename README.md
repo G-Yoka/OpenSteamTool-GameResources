@@ -1,21 +1,22 @@
 # GameResources
 
-# 资源仓库 / Resource Repository
+## 涓枃
+杩欐槸涓€涓嫭绔嬬殑娓告垙璧勬簮浠撳簱锛岀敤浜庣粰 OpenSteamTool Manager 鎻愪緵鍙笅杞姐€佸彲鏍￠獙銆佸彲瀹夎鐨勬父鎴忚祫婧愬寘銆傚畠涓嶅睘浜?OpenSteamTool 鏍稿績椤圭洰鏈韩銆?
+### 缁撴瀯
 
-这是一个独立的游戏资源仓库，用于给 OpenSteamTool Manager 提供可下载、可校验、可安装的游戏资源包。它不属于 OpenSteamTool 核心项目本身。
+- `manifest.json`锛氳祫婧愮储寮曪紝鐢辩鐞嗗櫒璇诲彇銆?- `packages/`锛歚manifest.json` 寮曠敤鐨?ZIP 璧勬簮銆?
+### 瑙勫垯
 
+- 姣忎釜璧勬簮鍖呴兘蹇呴』鍦?`manifest.json` 涓彁渚?SHA-256銆?- 绠＄悊鍣ㄤ細鍦ㄥ畨瑁呭墠鏍￠獙 SHA-256銆?- 寤鸿浣跨敤 `main` 鍒嗘敮浣滀负鍥哄畾鍙戝竷鍏ュ彛銆?
+## English
 This is a separate game resource repository used by OpenSteamTool Manager to provide downloadable, verifiable, and installable game resource packages. It does not belong to the OpenSteamTool core project itself.
 
-## 结构 / Structure
+### Structure
 
-- `manifest.json`: 资源索引 / resource index consumed by the manager
-- `packages/`: 被 `manifest.json` 引用的 ZIP 资源 / ZIP assets referenced by `manifest.json`
+- `manifest.json`: resource index consumed by the manager.
+- `packages/`: ZIP assets referenced by `manifest.json`.
 
-## 规则 / Rules
-
-- 每个资源包都必须在 `manifest.json` 中提供 SHA-256。
-- 管理器会在安装前校验 SHA-256。
-- 建议使用 `main` 分支作为固定发布入口。
+### Rules
 
 - Each package must include a SHA-256 hash in `manifest.json`.
 - The manager verifies the SHA-256 before installing.
