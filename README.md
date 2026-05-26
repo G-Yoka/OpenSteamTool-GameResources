@@ -1,13 +1,13 @@
 # GameResources
 
-杩欐槸涓€涓嫭绔嬬殑娓告垙璧勬簮浠撳簱锛岀敤浜庣粰 OpenSteamTool Manager 鎻愪緵鍙笅杞姐€佸彲鏍￠獙銆佸彲瀹夎鐨勬父鎴忚祫婧愬寘銆?
+这是一个独立的游戏资源仓库，用于给 OpenSteamTool Manager 提供可下载、可校验、可安装的游戏资源包。
 
-### 缁撴瀯
+### 结构
 
-- `manifest.json`锛氳祫婧愮储寮曪紝鐢辩鐞嗗櫒璇诲彇銆?
-- `packages/`锛歚manifest.json` 寮曠敤鐨?ZIP 璧勬簮銆?
+- `manifest.json`：资源索引，由管理器读取。
+- `packages/`：`manifest.json` 引用的 ZIP 资源。
 
-### 瑙勫垯
+### 规则
 
-- 姣忎釜璧勬簮鍖呴兘蹇呴』鍦?`manifest.json` 涓彁渚?SHA-256銆?
-- 绠＄悊鍣ㄤ細鍦ㄥ畨瑁呭墠鏍￠獙 SHA-256銆
+- 每个资源包都必须在 `manifest.json` 中提供 SHA-256。
+- 管理器会在安装前校验 SHA-256。
